@@ -22,7 +22,7 @@ function Comienza(){
 }
 //Detiene la observacion de la aceleracion
 
-function detener(){
+function Detente(){
 	if(watchID){
 		navigator .accelerometer.clearWatch (watchID);
 		watchID=null;
@@ -33,7 +33,7 @@ function correcto(acceleration){
 	var element=document.getElementById('acelerometro');
 	
 	element.innerHTML='Aceleracion en X:'+acceleration.x+'<br/>'+
-	'Acceleracion en Y:'+acceleration.y+'<br/>'+
+	'Aceleracion en Y:'+acceleration.y+'<br/>'+
 	'Intervalo:'+acceleration.timestamp+'<br/>';
 }
 
@@ -51,8 +51,8 @@ function Localiza(posicion){
 }
 //Error en la geolocalizacion
 function ErrorLocalizacion(error){
-	alert('codigo:'+error.code+'/n'+
-	'mensaje:'+error.message+'/n');
+	alert('codigo:'+error.code+'\n'+
+	'mensaje:'+error.message+'\n');
 }
 });
 
